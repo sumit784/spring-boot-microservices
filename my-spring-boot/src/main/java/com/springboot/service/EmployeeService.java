@@ -12,9 +12,8 @@ public interface EmployeeService {
 	public Employee saveEmployee(Employee Employee);
 	public Employee updateEmployee(Employee Employee);
 	void deleteEmployee(int id);
-	
-//	List<Employee> getSelectedEmployees();
-	List<Employee> getSelectedEmployeesUsingJoin();
+
+	List<Employee> getSelectedEmployeesUsingPROC(int empId);
 	
 	
 

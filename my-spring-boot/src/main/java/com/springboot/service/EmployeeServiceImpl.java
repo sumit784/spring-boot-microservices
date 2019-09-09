@@ -2,12 +2,7 @@ package com.springboot.service;
 
 import java.util.List;
 
-import javax.persistence.EntityManagerFactory;
-
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.stereotype.Service;
 
 import com.springboot.dao.Employee;
@@ -37,9 +32,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	
 	@Override
-	public List<Employee> getSelectedEmployeesUsingJoin(){
+	public List<Employee> getSelectedEmployeesUsingPROC(int empId){
 		
-		return EmployeeRepo.getSelectedEmployeesUsingJoin();
+		return EmployeeRepo.getSelectedEmployeesUsingPROC(empId);
 		
 	}
 	

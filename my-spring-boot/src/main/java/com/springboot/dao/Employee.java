@@ -3,7 +3,6 @@ package com.springboot.dao;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,9 +16,8 @@ public class Employee {
 	@Column(name="emp_name")
 	String empName;
 	
-	
-	@ManyToOne
-	Department dept;
+	@Column(name="emp_dep")
+	int empDept;
 	
 	@Column(name="emp_address")
 	int empAddress;
@@ -46,13 +44,12 @@ public class Employee {
 		this.empName = empName;
 	}
 
-
-	public Department getDept() {
-		return dept;
+	public int getEmpDept() {
+		return empDept;
 	}
 
-	public void setDept(Department dept) {
-		this.dept = dept;
+	public void setEmpDept(int empDept) {
+		this.empDept = empDept;
 	}
 
 	public int getEmpAddress() {
@@ -81,7 +78,12 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [empId=" + empId + ", empName=" + empName +  "]";
+		return "Employee [empId=" + empId + ", empName=" + empName + ", empDept=" + empDept + ", empAddress="
+				+ empAddress + ", empContact=" + empContact + ", empEmail=" + empEmail + ", getEmpId()=" + getEmpId()
+				+ ", getEmpName()=" + getEmpName() + ", getEmpDept()=" + getEmpDept() + ", getEmpAddress()="
+				+ getEmpAddress() + ", getEmpContact()=" + getEmpContact() + ", getEmpEmail()=" + getEmpEmail()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
 	}
 	
 	
